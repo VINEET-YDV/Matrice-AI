@@ -3,7 +3,7 @@
 This project implements a production-grade, real-time video inference system using YOLOv8. It's built on a decoupled client-server architecture to achieve maximum throughput, low latency, and optimal resource utilization.
 
 The system is composed of two main components:
-* **`server_formatted.py`**: A multi-threaded, GPU-accelerated server that runs the SEDA (Staged Event-Driven Architecture) pipeline for high-performance inference.
+* **`server.py`**: A multi-threaded, GPU-accelerated server that runs the SEDA (Staged Event-Driven Architecture) pipeline for high-performance inference.
 * **`client.py`**: A lightweight, `asyncio`-based client that streams video frames (from a file or webcam) to the server and saves the received JSON results to a file.
 
 
@@ -21,7 +21,7 @@ This project **requires an NVIDIA GPU** on the server machine to achieve its per
 
 ### 1. Project Files
 
-Download all the project files (`server_formatted.py`, `client.py`, `export_model.py`, `requirements.txt`) into a single directory.
+Download all the project files (`server.py`, `client.py`, `export_model.py`, `requirements.txt`) into a single directory.
 
 ### 2. Python Environment
 
@@ -36,3 +36,9 @@ conda activate yolo_server
 python -m venv yolo_env
 source yolo_env/bin/activate # (Linux/macOS)
 yolo_env\Scripts\activate     # (Windows)
+
+
+### 3. Install the required Python packages from the requirements.txt file.
+
+```Bash
+pip install -r requirements.txt
