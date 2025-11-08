@@ -1,0 +1,6 @@
+ultralytics
+onnx
+opencv-python-headless
+onnxruntime-gpu
+numpy
+websockets
