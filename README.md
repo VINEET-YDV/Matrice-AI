@@ -38,7 +38,32 @@ source yolo_env/bin/activate # (Linux/macOS)
 yolo_env\Scripts\activate     # (Windows)
 
 
-### 3. Install the required Python packages from the requirements.txt file.
-
-```Bash
+# Install the required Python packages from the requirements.txt file.
 pip install -r requirements.txt
+
+
+##  How to Run
+
+### 1. Terminal 1: Start the Inference Server
+
+Run the formatted server. It will load the model and wait for a connection.
+
+```bash
+python server_formatted.py
+
+Expected Output:
+[INFO] Using ONNX provider: CUDAExecutionProvider
+...
+[INFO] Server started at ws://localhost:8765
+
+### Terminal 2: Run the Python Client
+In a separate terminal, run the client.py script. You must provide a video source.
+To use a webcam:
+
+Bash
+python client.py --source 0
+(0 is typically the default webcam)
+
+To use a video file:
+Bash
+python client.py --source /path/to/your/video.mp4
