@@ -49,7 +49,7 @@ pip install -r requirements.txt
 Run the formatted server. It will load the model and wait for a connection.
 
 ```bash
-python server_formatted.py
+python server.py
 
 Expected Output:
 [INFO] Using ONNX provider: CUDAExecutionProvider
